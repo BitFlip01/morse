@@ -6,11 +6,8 @@ import collections
 import re
 
 import scapy 
-from scapy.all import IP, TCP, UDP, Ether, FlagsField
+from scapy.all import IP, TCP
 import scapy.utils
-
-# from scapy.all import *
-# from scapy.utils import *
 
 import yaml
 
@@ -100,7 +97,6 @@ def encode_pkts(msg, pkts, morse_code, offset=0):
     print("start encode in IP packets: {}".format(len(pkts[IP])))
 
     char = morse.popleft()
-    print(char)
     for p in pkts[IP][offset:]:
         if not char:
             try:

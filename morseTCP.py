@@ -4,13 +4,11 @@ import base64
 import argparse
 import random
 import re
+import collections
 
 import scapy 
-from scapy.all import IP, TCP, UDP, Ether, FlagsField
+from scapy.all import IP, TCP
 import scapy.utils 
-
-# from scapy.all import *
-# from scapy.utils import *
 
 import yaml
 
